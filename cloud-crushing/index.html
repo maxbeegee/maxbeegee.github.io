@@ -114,150 +114,93 @@ if (!doNotTrack) {
             <div class="content">
                 <h2>Cloud crushing</h2>
                 <div style="text-align: left">
-                    <p>Both absorption and emission line studies of galaxies show that cold gas around them is commonly ouflowing at speeds of ∼several hundred km/s (see review by Veilleux et al., 2005, and references therein). This robust observational fact poses a severe challenge to our theoretical models of galaxy formation since (i) most feedback mechanisms (e.g., supernovae feedback) accelerate hot gas, and (ii) the timescale it takes to accelerate a blob of cold gas via a hot wind is roughly an order of magnitude larger than the time it takes to destroy the blob (of order the Kevin-Helmholtz and Rayleigh-Taylor timescale of the problem and usually denoted the ‘cloud crushing time’ tcc). Specifically, simple analytic estimates of an adiabatic gas cloud being pushed by a wind yield the ratio of the two timescales to be ∼ χ^<sup>1</sup>&frasl;<sub>2</sub> (Klein et al., 1994). Here, χ is the density contrast between the cold and the hot gas which typically takes values of ∼ 100 − 1000 in galactic environments. This result has since then been backed up by several numerical studies which show that cold gas cannot be entrained in the hot wind but instead mixes into the hot gas and heats up.</p>
-
+                    <p>Both absorption and emission line studies of galaxies show that cold gas around them is commonly ouflowing at speeds of ∼several hundred km/s (see review by Veilleux et al., 2005, and references therein). This robust observational fact poses a severe challenge to our theoretical models of galaxy formation since (i) most feedback mechanisms (e.g., supernovae feedback) accelerate hot gas, and (ii) the timescale it takes to accelerate a blob of cold gas via a hot wind is roughly an order of magnitude larger than the time it takes to destroy the blob (of order the Kevin-Helmholtz and Rayleigh-Taylor timescale of the problem and usually denoted the ‘cloud crushing time’ tcc). Specifically, simple analytic estimates of an adiabatic gas cloud being pushed by a wind yield the ratio of the two timescales to be ∼ χ^1/2 (Klein et al., 1994). Here, χ is the density contrast between the cold and the hot gas which typically takes values of ∼ 100 − 1000 in galactic environments. This result has since then been backed up by several numerical studies which show that cold gas cannot be entrained in the hot wind but instead mixes into the hot gas and heats up.</p>
 <p>This is also shown in the video below where we can see that the clump of dense gas gets destroyed on a timescale of a few tcc:</p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/-UlCf4F2i7o?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
 <p>Recently, Zhang et al. (2017) summarized this discrepancy between observations and theory by using hydrodynamical results in the literature combined with an analytic formulation for the outflows which allowed them to derive theoretically feasible outflow speeds of cold gas. They compare their findings to observations, and concluded that hot winds cannot accelerate the cold gas to the observed velocities, or – as their title “Entrainment in Trouble” suggests.</p>
-
 <p>In <a href="https://arxiv.org/abs/1806.02728" target="_blank">arXiv:1806.02728</a>
  we re-visited this problem using Athena simulations with a similar setup to previous simulations which included radiative cooling. Our results mostly confirm the previous findings, that is, show that cooling is commonly not efficient enough the prevent the destruction of cold gas. However, we also identify some region of parameter space where the cooling efficiency of the mixed, ‘warm’ gas is large enough where not only the cold gas does not get destroyed but instead seeds additional cooling in the ambient medium, leading to a formation of new, comoving cold gas which can exceed the original cold gas mass.</p>
-
 <p>This can be seen in this video below where we see new, cold gas formation in the tail of the cloud.</p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/cITt7P1Na4g?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
 <p>The main result of our first paper on this subject was that we identified the criterion <code>t_{cool, mix} / t_cc &lt; 1</code>. If fulfilled, the cloud survives and can get entrained by the hot wind. The figure below shows visually what happens if this criterion is fulfilled (right panels) and if <code>t_{cool, mix} / t_cc &gt; 1</code> (left panels).</p>
-
 <figure>
     <img src="/images/research/cloud_crushing.png" width="100%"/> 
 </figure>
 
-
 <p>In follow up work we found that this hold under various conditions, e.g., also if magnetic fields are added. Here is a video of the density projection with strong magnetic fields (plasma beta of both the cloud and the wind of order unity):</p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/unUOFLW6nik?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
 <p>Note how the morphology is quite different to the pure hydro case?</p>
-
 <p>Also, note how in both the hydro and the MHD simulations the cold gas cloud keeps on growing even once the cloud is entrained. This is maybe counter-intuitive: one might expect that the mass growth is proportional to the shear since this increases mixing and, thus, cooling.
 However, in <a href="https://arxiv.org/abs/1907.04771" target="_blank">arXiv:1907.04771</a>
  we studied the mass growth more closely and found that it is cooling induced which implies that the cold gas keeps on growing even once the cloud is fully entrained.</p>
-
-<p>This opens up a range of possibly implications for this process. For instance, we know that quite a lot of cold gas can be found around galaxies (often referred to as the `circumgalactic medium&rsquo;). This process might be responsible for this cold gas (which we also discuss in <a href="https://arxiv.org/abs/1907.04771" target="_blank">arXiv:1907.04771</a>
+<p>This opens up a range of possibly implications for this process. For instance, we know that quite a lot of cold gas can be found around galaxies (often referred to as the `circumgalactic medium'). This process might be responsible for this cold gas (which we also discuss in <a href="https://arxiv.org/abs/1907.04771" target="_blank">arXiv:1907.04771</a>
 ).</p>
-
-<h2>More videos</h2>
-
-<p>Parameters:
-<ul>
-    <li style="list-style-type: none;">
-<ul>
-    <li>r = r<sub>cl</sub> / d<sub>cell</sub>, i.e., describes the resolution</li>
-    <li>χ is the initial overdensity of the clump</li>
-</ul>
-</li>
-</ul>
-All videos have been created with the wonderful <a href="http://yt-project.org/" target="_blank" rel="noopener">yt</a>.</p>
-
-<h3> Hydrodynamics only</h3>
-
-<h4>r=64, χ = 100, t<sub>cool,mix</sub>/t<sub>cc</sub> ~ 0.08</h4>
-
+<!-- raw HTML omitted -->
+<p>Parameters:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/cITt7P1Na4g?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
-<p style="text-align: center;"><a href="https://www.dropbox.com/s/3gmbs1xbmauziu6/density_Slice_Z_big.mp4?dl=1" target="_blank" rel="noopener">Dowload</a></p>
-
+<!-- raw HTML omitted -->
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/Sq9DEXcimDg?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
-<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/V_5iY0xFWHw?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-<h4>r=8, χ = 100, t<sub>cool,mix</sub>/t<sub>cc</sub> ~ 8</h4>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/-UlCf4F2i7o?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</p>
-
+<!-- raw HTML omitted -->
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/4AOXU0n5Gzs?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
-<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/0yaBQLAhzLI?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-<h4>r=64, χ = 10, t<sub>cool,mix</sub>/t<sub>cc</sub> ~ 0.08</h4>
+<!-- raw HTML omitted -->
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/lMYt_Ayyjys?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</p>
-
-<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/piz1hiMTtos?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-<h4>r=8, χ = 1000, t<sub>cool,mix</sub>/t<sub>cc</sub> ~ 0.05</h4>
+<!-- raw HTML omitted -->
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/4qR5OaZBNaM?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</p>
-
-<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/6nMP-CCxBy4?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-<h4>r=32, χ = 100, M = 3, t<sub>cool,mix</sub>/t<sub>cc</sub> ~ 0.08</h4>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/d01rNCh4igU?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</p>
-
+<!-- raw HTML omitted -->
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/lKkFXZrgOLQ?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
-<h4>r=16, χ = 100, t<sub>cool,mix</sub>/t<sub>cc</sub> ~ 0.08, bcl ~ bwind ~ 1</h4>
-
+<!-- raw HTML omitted -->
 <p>With MHD where the plasma beta parameter of the cloud and the wind are unity.</p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/unUOFLW6nik?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/_a8_rK37Oa0?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/pNXX0NybYsE?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
 <p>And the magnetic field:</p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/D8mFeVlUdn4?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
@@ -291,6 +234,9 @@ All videos have been created with the wonderful <a href="http://yt-project.org/"
 <script src="https://maxbeegee.github.io/assets/js/skel.min.js"></script>
 <script src="https://maxbeegee.github.io/assets/js/util.js"></script>
 <script src="https://maxbeegee.github.io/assets/js/main.js"></script>
+
+<script src="https://maxbeegee.github.io/assets/js/cookie.notice.js"></script>
+
 
 
     </body>

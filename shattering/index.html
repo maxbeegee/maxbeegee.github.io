@@ -115,87 +115,60 @@ if (!doNotTrack) {
                 <h2>Shattering</h2>
                 <div style="text-align: left">
                     <p>How does a gas cloud cool? The common picture is that it does so first <em>isochorically</em>, i.e., with a change of temperature but essentially no change of the shape of the gas cloud. This would mean that then the cloud is wildly out of pressure balance.</p>
-
 <p>McCourt et al. (2018), however, conjectured in <a href="https://arxiv.org/abs/1610.01164" target="_blank">arXiv:1610.01164</a>
  that instead, the cloud breaks up while cooling into a lot of small droplets of size <code>$\mathrm{min}(c_{\mathrm{s}}t_{\mathrm{cool}}) \sim 0.1 (n / 1\,\mathrm{cm}^3)^{-1}\,$</code> (here $n$ is the gas number density).
 They call this process &ldquo;shattering&rdquo; and explain in their paper how it can explain a wide range of observations.</p>
-
 <p>The major idea of McCourt et al. (2018) is based on a timescale argument. If a cloud of gas cools to a new temperature $T$ this occurs on a short timescale <code>$t_{\mathrm{cool}}$</code>.
 On the other hand, the time it takes for the pressure to equilibrate via contraction of a system of size $r$ is of order the sound crossing time <code>$r / c_{\mathrm{s}}$</code>. Thus, if the cloud is large, it might be out of pressure balance a long time. Instead, they proposes that the gas cloud will fragment in smaller pieces of size <code>$c_{\mathrm{s}} t_{\mathrm{cool}}$</code>. If those clouds were to cool further, a fragmentation cascade follows until the cloudlets are of size <code>$\mathrm{min}(c_{\mathrm{s}}t_{\mathrm{cool}})$</code> from which point onward the sound crossing is smaller than the cooling time, thus, the pressure can equilibrate quickly.</p>
-
 <p>In <a href="https://arxiv.org/abs/1912.07808" target="_blank">arXiv:1912.07808</a>
 , we wanted to revisit the &ldquo;shattering&rdquo; process, mainly to address the question under which conditions it occurs. Specifically, does it occur in three-dimensions and whether a large (non-linear) initial overdensity is required &ndash; which does not exist in the context of, e.g., precipitation.</p>
-
 <p>This is a video of a gas cloud cooling from $\sim 10^5$K to $\sim 10^4$K, and clearly &ldquo;shattering&rdquo;:</p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/dKojwPAZ0Ms?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
-<p>Note that this simulation has been run in 3D using the <a href="https://princetonuniversity.github.io/Athena-Cversion/" target="_blank">ATHENA</a> code.</p>
-
+<p>Note that this simulation has been run in 3D using the <!-- raw HTML omitted -->ATHENA<!-- raw HTML omitted --> code.</p>
 <p>As explained above, the shattering process only happens for large enough clouds, i.e., if <code>$r_{\rm cl} \gg l_{\rm shatter}$</code> where we defined the shattering length scale <code>$l_{\rm shatter} \equiv \mathrm{min}(c_{\mathrm{s}} t_{\mathrm{cool}})$</code>.</p>
-
 <p>This shows a smaller cloud roughly the size <code>$l_{\rm shatter}$</code> undergoing the same cooling process:</p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/Xd-nOlFpVJo?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
 <p>The pressure slices of these two simulations are:</p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/ZO4mSLV3bKY?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
 <p>and</p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/eFp3kcyS-pE?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
 <p>Can you guess which was the shattered one?</p>
-
 <p>Interestingly, the size is not the only parameter which decides whether a cloud shatters or not&hellip;but also how &ldquo;far&rdquo; it is cooling. The videos above are of simulations cooling from $\sim 10^5$K to $\sim 10^4$K, i.e., by a factor of $10$. This is a simulation of a cloud much larger than <code>$l_{\rm shatter}$</code>d` but cooling only by a factor of $1.5$:</p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/6N1JIxG2dQw?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
 <p>Is pulsates and does not break apart!
 The pulsations is due to the fact that the pressure overshoots inside the cloud leading to another expansion, and the reason that it didn&rsquo;t break up is that is has not been perturbed enough out of pressure balance.</p>
-
 <p>Here are the three cases summed up in one figure:</p>
-
 <figure>
     <img src="/images/research/shattering/shattering_cases.png" width="100%"/> 
 </figure>
 
-
 <p>The threshold whether a cloud shatters, i.e., what factor <code>$T_{\rm cl} / T_{\rm floor}$</code> is required for a large cloud to shatter depends, on the <em>initial</em> overdensity. In fact, we found this relation to be linear (with a small dependence on redshift) which means that clouds with a <em>final</em> overdensity of <code>$\chi_{\rm f} = \chi_{\rm i} T_{\rm cl} / T_{\rm floor} &gt; \chi_{\rm crit} \sim 300$</code> will shatter.</p>
-
 <p>The reason for this is essentially a competition between the violent &ldquo;explosion&rdquo; we&rsquo;ve seen above, and the re-gathering of droplets.</p>
-
 <p>See for instance a videos with <code>$\chi_{\rm i}= 10$</code> and  <code>$T_{\rm cl} / T_{\rm floor} = 20$</code>, i.e., <code>$\chi_{\rm f}=200$</code></p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/td63IKsRxsI?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
 <p>Here, the droplets regather quickly into larger clouds.</p>
-
 <p>Compare this to a simulation where also <code>$\chi_{\rm i}= 10$</code> but  <code>$T_{\rm cl} / T_{\rm floor} = 40$</code>, i.e., <code>$\chi_{\rm f}=400$</code></p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/khiGyItftqw?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-
 
 <p>In this case, the coagulation process is not as quick, leaving a &ldquo;mist&rdquo; of droplets.
 Read more details in <a href="https://arxiv.org/abs/1912.07808" target="_blank">arXiv:1912.07808</a>
@@ -229,6 +202,9 @@ Read more details in <a href="https://arxiv.org/abs/1912.07808" target="_blank">
 <script src="https://maxbeegee.github.io/assets/js/skel.min.js"></script>
 <script src="https://maxbeegee.github.io/assets/js/util.js"></script>
 <script src="https://maxbeegee.github.io/assets/js/main.js"></script>
+
+<script src="https://maxbeegee.github.io/assets/js/cookie.notice.js"></script>
+
 
 
     </body>
